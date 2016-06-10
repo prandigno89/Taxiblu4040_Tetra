@@ -1,0 +1,151 @@
+<html>
+
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/pure-min.css" />
+<link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="css/switch.css" />
+<script src="js/zepto_min.js"></script>
+<script src="js/tetra.js"></script>
+<script src="js/service.js"></script>
+</head>
+<body>
+<div id="header" class="header center noselect"><h3>Prenota la tua corsa Taxi</h3></div>
+<div id="centroPagina" class="center noselect scrollabile">
+					
+					<div id="page1" class="altezza">
+						<div id="body">
+							<img src="images/logo.png"/>
+								<span class="pure-menu-heading">Seleziona il servizio:</span>
+								<ul class="pure-menu-list">
+								<li class="pure-list-item"><a href="#" id="a1" class="pure-menu-link">Prenotazione Rapida</a></li>
+								<li class="pure-list-item"><a href="#" id="a2" class="pure-menu-link">Opzioni Taxi</a></li>
+								<li class="pure-list-item"><a href="#" id="a3" class="pure-menu-link">Annulla Corsa</a></li>
+								<li class="pure-list-item"><a href="#" id="a4" class="pure-menu-link">Impostazioni</a></li>
+								</ul>	
+						</div>
+					</div>
+					<!-- Pagina 2: prenotazione rapida-->
+					<div id="page2" class="altezza">
+						<div id="body">
+							<a id="back1" href="#" ><img src="./images/backSimple.png" class="back"></a>
+							
+							<p>Vuoi prenotare una corsa taxi?</p>
+							<a id="prapida1" href="#" class="pure-button pure-button-primary pure-u-1 fisso">Chiama Taxi</a><br/><br/>
+							
+						</div>
+					</div>
+					<!-- Pagina 3: prenotazione con opzioni-->
+					<div id="page3">
+						<div id="body" class="altezza">
+						<a id="back2" href="#"><img src="./images/backOption.png" class="back"></a>
+						<span class="pure-menu-heading">seleziona i Servizi a bordo:</span>						
+						<form id="options">		
+							<!--class="pure-table pure-table-horizontal"-->								
+						<table>
+   
+								<tbody>
+									<!--riga 1-->
+									<tr>
+										<td>Carta/Bancomat</td>
+										<td><div class="onoffswitch">
+								       <input type="checkbox" name="POS" class="onoffswitch-checkbox" id="checkbox-1"><label class="onoffswitch-label" for="checkbox-1"></label>
+								</div></td>
+									</tr>
+									<!--riga 2-->
+									<tr>
+										<td>Amex</td>
+										<td><div class="onoffswitch">
+								       <input type="checkbox" name="AMEX" class="onoffswitch-checkbox" id="checkbox-2"><label class="onoffswitch-label" for="checkbox-2"></label>
+								</div></td>
+									</tr>
+									<!--riga 3-->
+									<tr>
+										<td>5 Posti</td>
+										<td><div class="onoffswitch">
+								       <input type="checkbox" name="5 POSTI" class="onoffswitch-checkbox" id="checkbox-3"><label class="onoffswitch-label" for="checkbox-3"></label>
+								</div></td>
+									</tr>
+									<!--riga 4-->
+									<tr>
+										<td>6 Posti</td>
+										<td><div class="onoffswitch">
+								       <input type="checkbox" name="6 POSTI" class="onoffswitch-checkbox" id="checkbox-4"><label class="onoffswitch-label" for="checkbox-4"></label>
+								</div></td>
+									</tr>
+									<!--riga 5-->
+									<tr>
+										<td>Inglese</td>
+										<td><div class="onoffswitch">
+								       <input type="checkbox" name="INGLESE" class="onoffswitch-checkbox" id="checkbox-5"><label class="onoffswitch-label" for="checkbox-5"></label>
+								</div></td>
+									</tr>
+                                    <!--riga 5-->
+									<tr>
+										<td>St. Wagon Grande</td>
+										<td><div class="onoffswitch">
+								       <input type="checkbox" name="SW GRANDE" class="onoffswitch-checkbox" id="checkbox-6"><label class="onoffswitch-label" for="checkbox-6"></label>
+								</div></td>
+									</tr>
+																		
+								</tbody>
+						</table>
+						
+								<a id="prapida2" href="#" class="pure-button pure-button-primary pure-u-1 fisso">Chiama Taxi</a>
+																
+						</form>
+																
+						</div>
+					</div>			
+				<!-- Pagina di attesa: LOADER per invio del JSON di esito della prenotazione -->
+					<div id="page4" class="altezza">
+						<div id="body">
+								
+								<img src="images/logo.png"/>
+								<br/>
+								<br/>
+								<img src="images/loader.gif"/>
+															
+						</div>
+					</div>
+				<!-- Pagina di esito della prenotazione -->
+				<div id="page6" class="altezza">
+					<a id="back3" href="#"><img src="./images/backEsito.png" class="back"></a>
+						<div id="body">
+							<div id="meteo" class="meteo_body"></div>
+							<div  id="esito">
+							<p id="message"></p>							
+							<p id="sigla"></p>
+							<p id="attesa"></p>
+							<p id="idcorsa"></p>
+                            <p id="endmessage"></p>
+							</div>
+						</div>
+					</div>
+				
+				<!-- Pagina delle impostazioni -->
+				<div id="page7" class="altezza">
+						<div id="body">
+							<a id="back4" href="#"><img src="./images/backSettings.png" class="back"></a>								
+							<p>Seriale del POS:</p>
+							<p id="serial"></p>							
+						</div>
+				</div>
+				<!-- Pagina 8: annullamento ultima-->
+					<div id="page8" class="altezza">
+						<div id="body">
+							<a id="back5" href="#" ><img src="./images/backAnnulla.png" class="back"></a>
+							
+							<p>Annullare l'ultima prenotazione?</p>
+							<a id="annullo" href="#" class="pure-button pure-button-primary pure-u-1 fisso">Annulla</a>
+							
+						</div>
+					</div>
+				
+</div>	
+		<!--Footer-->	
+	<div id="footer" class="center noselect footerborder">
+			<img src="images/html.png" />
+		</div>
+</body>
+</html>

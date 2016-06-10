@@ -1,0 +1,6 @@
+.meteo_icon{
+    float: left; margin: 0px 15px 15px 0px;
+}
+.meteo_body{
+  max-height:80px;
+}
